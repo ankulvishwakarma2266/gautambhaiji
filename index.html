@@ -3,280 +3,555 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gautam Jha - Stock Learner</title>
+<title>Gautam Kumar Jha {OFFICIAL}</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  margin: 0;
-  padding: 32px 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f1e8;
-  color: #292722;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#030817;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-.landing-page {
-  width: 100%;
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 38px 32px 34px;
-  background: #ffffff;
-  border: 1px solid #e9e0d1;
-  border-radius: 40px;
-  box-shadow: 0 8px 30px rgba(110, 83, 35, 0.04);
-  text-align: center;
+/* HEADER */
+.header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#111c31;
+    border-bottom:1px solid rgba(0,255,190,.15);
+    padding:17px 25px;
 }
 
-.profile-image {
-  width: 240px;
-  height: 240px;
-  max-width: 75%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 8px solid #d69a25;
-  box-shadow: 0 10px 28px rgba(100, 75, 30, 0.15);
-  margin: 0 auto 25px;
-  display: block;
+.header-inner{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
 }
 
-.name {
-  font-size: 44px;
-  line-height: 1.15;
-  font-weight: 400;
-  margin: 0 0 14px;
-  letter-spacing: 0.3px;
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.subtitle {
-  font-size: 20px;
-  line-height: 1.5;
-  color: #858074;
-  margin: 0 0 25px;
+.brand img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    border:2px solid #00e5a0;
+    object-fit:cover;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 50px;
+.brand-name{
+    font-family:'Playfair Display',serif;
+    font-size:21px;
+    font-weight:800;
 }
 
-.tag {
-  padding: 12px 19px;
-  border: 1px solid #ead8b8;
-  border-radius: 30px;
-  background: #fbf2e3;
-  color: #8c6a30;
-  font-size: 16px;
+.trusted{
+    border:1px solid #006d65;
+    color:#00d9ae;
+    padding:11px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    white-space:nowrap;
 }
 
-.telegram-button {
-  display: block;
-  width: 100%;
-  padding: 25px 12px;
-  margin: 0 0 16px;
-  background: #d09422;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  font-size: 29px;
-  line-height: 1.35;
-  font-weight: 700;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(178, 126, 29, 0.18);
-  transition: background 0.2s ease;
+/* HERO */
+.hero{
+    background:linear-gradient(145deg,#b5e9dd 0%,#83b8ae 48%,#526f70 100%);
+    text-align:center;
+    padding:45px 20px 65px;
 }
 
-.telegram-button:hover {
-  background: #b98118;
+.hero-logo{
+    width:175px;
+    height:175px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #00e5a0;
+    box-shadow:0 0 25px rgba(0,255,170,.5);
+    margin:0 auto 35px;
 }
 
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 28px;
+.promise{
+    display:inline-block;
+    background:#101a30;
+    border:1px solid #00cba4;
+    border-radius:30px;
+    padding:11px 23px;
+    color:#00e5bd;
+    font-weight:600;
+    font-size:17px;
+    margin-bottom:25px;
 }
 
-.feature {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  min-height: 88px;
-  padding: 17px 21px;
-  text-align: left;
-  border: 1px solid #e6e0d5;
-  border-radius: 22px;
-  background: #ffffff;
-  font-size: 21px;
-  line-height: 1.4;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+.hero h1{
+    font-size:36px;
+    line-height:1.42;
+    font-weight:800;
+    max-width:850px;
+    margin:0 auto 25px;
+    color:#fff;
 }
 
-.check {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 15px;
-  background: #f4e6ca;
-  color: #9a6c19;
-  font-size: 28px;
-  font-weight: bold;
+.gradient-text{
+    background:linear-gradient(90deg,#00d69b,#00a9d9);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    font-family:'Playfair Display',serif;
 }
 
-@media (max-width: 480px) {
-  body {
-    padding: 20px 12px;
-  }
+.hero-description{
+    max-width:750px;
+    margin:0 auto;
+    color:#e0f0ec;
+    font-size:19px;
+    line-height:1.9;
+}
 
-  .landing-page {
-    padding: 28px 20px 25px;
-    border-radius: 32px;
-  }
+/* TELEGRAM BUTTON */
+.join-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    max-width:680px;
+    width:100%;
+    margin:65px auto 22px;
+    padding:29px 15px;
+    border-radius:30px;
+    text-decoration:none;
+    color:#031322;
+    font-size:24px;
+    font-weight:800;
+    background:linear-gradient(100deg,#00d6a1,#00c5ed);
+    box-shadow:0 10px 30px rgba(0,225,190,.2);
+    transition:.3s;
+}
 
-  .profile-image {
-    width: 225px;
-    height: 225px;
-    margin-bottom: 24px;
-  }
+.join-button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,225,190,.35);
+}
 
-  .name {
-    font-size: 36px;
-  }
+.telegram-icon{
+    width:42px;
+    height:42px;
+    background:#031322;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
 
-  .subtitle {
-    font-size: 17px;
-  }
+.telegram-icon svg{
+    width:25px;
+    fill:#00d6bd;
+}
 
-  .tags {
-    margin-bottom: 42px;
-    gap: 8px;
-  }
+.free-text{
+    color:#b6d4ce;
+    font-size:17px;
+}
 
-  .tag {
-    font-size: 14px;
-    padding: 11px 15px;
-  }
+.free-text span{
+    color:#00dfb0;
+    font-weight:700;
+}
 
-  .telegram-button {
-    font-size: 23px;
-    padding: 22px 8px;
-    border-radius: 18px;
-  }
+/* BENEFITS */
+.benefits{
+    background:#111d32;
+    border:1px solid rgba(0,220,180,.25);
+    border-radius:28px;
+    max-width:900px;
+    margin:0 auto;
+    padding:35px;
+}
 
-  .feature {
-    min-height: 88px;
-    padding: 15px;
-    gap: 15px;
-    font-size: 18px;
-    border-radius: 20px;
-  }
+.section-title{
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:45px;
+}
 
-  .check {
-    width: 47px;
-    height: 47px;
-    font-size: 26px;
-  }
+.benefit-card{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:24px;
+    margin-bottom:20px;
+    background:#0e1930;
+    border:1px solid #233149;
+    border-radius:22px;
+    transition:.3s;
+}
+
+.benefit-card:last-child{
+    margin-bottom:0;
+}
+
+.benefit-card:hover{
+    border-color:#00cfa9;
+    transform:translateY(-3px);
+}
+
+.benefit-icon{
+    min-width:62px;
+    width:62px;
+    height:62px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#00d9b0;
+    background:rgba(0,220,180,.09);
+    border:1px solid rgba(0,220,180,.2);
+    font-size:29px;
+}
+
+.benefit-card:nth-of-type(3) .benefit-icon{
+    color:#00c9ed;
+    background:rgba(0,180,220,.1);
+}
+
+.benefit-card h3{
+    font-size:20px;
+    margin-bottom:5px;
+    font-weight:700;
+}
+
+.benefit-card p{
+    color:#9baec0;
+    font-size:17px;
+    line-height:1.65;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+    max-width:900px;
+    margin:42px auto;
+    padding:30px;
+    border:1px solid #253149;
+    border-radius:23px;
+    background:#070b20;
+}
+
+.disclaimer h3{
+    color:#ffc928;
+    font-size:19px;
+    margin-bottom:20px;
+}
+
+.disclaimer p{
+    color:#9ba9bd;
+    font-size:17px;
+    line-height:1.85;
+    margin-bottom:15px;
+}
+
+.disclaimer strong{
+    color:#aab9cd;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:35px 15px;
+    border-top:1px solid #202c40;
+    color:#9caabe;
+    background:#101b30;
+    font-size:16px;
+    line-height:2;
+}
+
+.footer strong{
+    font-family:'Playfair Display',serif;
+    color:#b9c4d2;
+}
+
+.footer a{
+    color:#9caabe;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:600px){
+
+    .header{
+        padding:14px 17px;
+    }
+
+    .brand img{
+        width:58px;
+        height:58px;
+    }
+
+    .brand-name{
+        font-size:17px;
+    }
+
+    .trusted{
+        font-size:11px;
+        padding:10px 12px;
+    }
+
+    .hero{
+        padding:42px 20px 55px;
+    }
+
+    .hero-logo{
+        width:165px;
+        height:165px;
+        margin-bottom:30px;
+    }
+
+    .promise{
+        font-size:15px;
+        padding:10px 15px;
+    }
+
+    .hero h1{
+        font-size:28px;
+        line-height:1.48;
+        margin-bottom:25px;
+    }
+
+    .hero-description{
+        font-size:17px;
+        line-height:2;
+    }
+
+    .join-button{
+        margin-top:65px;
+        padding:27px 10px;
+        border-radius:28px;
+        font-size:20px;
+        gap:13px;
+    }
+
+    .telegram-icon{
+        width:40px;
+        height:40px;
+    }
+
+    .free-text{
+        font-size:16px;
+    }
+
+    .benefits{
+        margin:0 28px;
+        padding:30px 20px;
+        border-radius:27px;
+    }
+
+    .section-title{
+        font-size:20px;
+        margin-bottom:45px;
+    }
+
+    .benefit-card{
+        padding:24px;
+        gap:15px;
+        border-radius:21px;
+    }
+
+    .benefit-icon{
+        min-width:61px;
+        width:61px;
+        height:61px;
+    }
+
+    .benefit-card h3{
+        font-size:18px;
+    }
+
+    .benefit-card p{
+        font-size:16px;
+    }
+
+    .disclaimer{
+        margin:42px 28px;
+        padding:28px;
+    }
+
+    .disclaimer h3{
+        font-size:17px;
+    }
+
+    .disclaimer p{
+        font-size:16px;
+    }
+
+    .footer{
+        font-size:15px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="landing-page">
+<!-- HEADER -->
+<header class="header">
+<div class="header-inner">
 
-  <!-- PROFILE PHOTO -->
-  <img
-    class="profile-image"
-    src="https://i.ibb.co/Q3tPNYCf/GAUTAM-IMAGE-1.jpg"
-    alt="Gautam Jha"
-  >
-
-  <h1 class="name">STOCK LEARNERS GAUTAM JHA</h1>
-
-  <p class="subtitle">
-    Daily Market Updates • Trading Insights
-  </p>
-
-  <div class="tags">
-    <span class="tag">NIFTY</span>
-    <span class="tag">BANKNIFTY</span>
-    <span class="tag">OPTIONS</span>
-  </div>
-
-  <!-- FIRST TELEGRAM BUTTON -->
-  <a
-    class="telegram-button"
-    href="https://t.me/+uzuHuWWdiQRiN2Fl"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🚀 JOIN TELEGRAM CHANNEL
-  </a>
-
-  <div class="features">
-
-    <div class="feature">
-      <span class="check">✓</span>
-      <span>Daily market analysis &amp; trading insights</span>
-    </div>
-
-    <div class="feature">
-      <span class="check">✓</span>
-      <span>NIFTY &amp; BANKNIFTY market updates</span>
-    </div>
-
-    <div class="feature">
-      <span class="check">✓</span>
-      <span>Useful market levels &amp; regular updates</span>
-    </div>
-
-    <div class="feature">
-      <span class="check">✓</span>
-      <span>Simple content for traders &amp; beginners</span>
-    </div>
-
-    <div class="feature">
-      <span class="check">✓</span>
-      <span>Active trading community discussions</span>
-    </div>
-
-  </div>
-
-  <!-- SECOND TELEGRAM BUTTON -->
-  <a
-    class="telegram-button"
-    href="https://t.me/+uzuHuWWdiQRiN2Fl"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🚀 JOIN TELEGRAM CHANNEL
-  </a>
-    Powered By Ankul Ad Agency
+<div class="brand">
+<img src="https://i.ibb.co/V0TgF4y3/Gautam-dp.jpg" alt="Stock Learners Logo">
+<div class="brand-name">GAUTAM KUMAR JHA {OFFICIAL}</div>
 </div>
 
+<div class="trusted">
+● TRUSTED COMMUNITY
+</div>
+
+</div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+<img class="hero-logo"
+src="https://i.ibb.co/V0TgF4y3/Gautam-dp.jpg"
+alt="Stock Learners">
+
+<div>
+<span class="promise">🛡 No False Promises, Only Real Learning</span>
+</div>
+
+<h1>
+Trading Me Consistent Profit Banana Chahte Hain?
+Phele Market Ki Asli Logic Samjhiye
+<span class="gradient-text">GAUTAM KUMAR JHA</span>
+Ke Sath!
+</h1>
+
+<p class="hero-description">
+Random tips aur blind trades ke chakkar me loss karna band karein.
+Proper risk management aur technical clarity ke sath market ko handle karna seekhein.
+</p>
+
+<!-- TELEGRAM JOIN BUTTON -->
+<a href="https://t.me/+T2eDZhEDHnU3YWU1"
+class="join-button"
+target="_blank">
+
+<span class="telegram-icon">
+<svg viewBox="0 0 24 24">
+<path d="M9.04 15.47 8.7 20.2c.49 0 .7-.21.95-.46l2.28-2.18 4.73 3.46c.87.48 1.48.23 1.7-.81l3.09-14.5c.3-1.37-.5-1.9-1.34-1.55L1.62 11.12c-1.32.51-1.3 1.24-.23 1.57l4.73 1.47L17.1 7.1c.52-.34.99-.15.6.2z"/>
+</svg>
+</span>
+
+<span>JOIN TELEGRAM CHANNEL NOW</span>
+
+</a>
+
+<div class="free-text">
+<span>✓</span> 100% Free Community
+&nbsp; • &nbsp;
+<span>⚡</span> Instant Access
+</div>
+
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="benefits">
+
+<h2 class="section-title">
+AAPKO HUMARE SATH JUDNE PAR KYA FAYDA HOGA?
+</h2>
+
+<div class="benefit-card">
+<div class="benefit-icon">🎓</div>
+<div>
+<h3>Zero to Hero Concepts</h3>
+<p>Stock market ki complete ABCD bilkul simple aur clear bhasha me seekhein.</p>
+</div>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">📈</div>
+<div>
+<h3>Real Chart Breakdowns</h3>
+<p>Live market hours me chart movements aur important zones ki practical learning.</p>
+</div>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">👤</div>
+<div>
+<h3>Capital Safeguard Rules</h3>
+<p>Bina proper stop-loss ke trading na karne ki strict mental habit develop karein.</p>
+</div>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">💬</div>
+<div>
+<h3>Direct Guidance & Updates</h3>
+<p>Daily market observations aur valuable financial insights direct aap tak.</p>
+</div>
+</div>
+
+</section>
+
+<!-- SEBI DISCLAIMER -->
+<section class="disclaimer">
+
+<h3>⚠️ SEBI COMPLIANCE & RISK DISCLOSURE</h3>
+
+<p>
+Is Telegram channel par share kiya gaya saara content,
+images aur technical analysis sirf
+<strong>Educational & Information Purpose</strong>
+ke liye hai.
+</p>
+
+<p>
+Hum <strong>SEBI Registered Advisor/Analyst nahi hain.</strong>
+Hum koi paid advisory, stock tip, buy/sell call ya profit sharing commitment offer nahi karte.
+Financial markets me investment me risk hota hai.
+Apne financial decision se pehle certified advisor se consult karein.
+</p>
+Powered By Ankul Ad Agency
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<p>
+© 2026 <strong>GAUTAM KUMAR JHA.</strong>
+All Rights Reserved.
+</p>
+
+<p>
+<a href="#">Privacy Policy</a>
+•
+<a href="#">Terms of Service</a>
+•
+<a href="#">Disclaimer</a>
+</p>
+
+</footer>
+
 </body>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1658321815999947');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1658321815999947&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
 </html>
